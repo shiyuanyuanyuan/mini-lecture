@@ -3,12 +3,14 @@ import java.util.List;
 import movie.Movie;
 
 /**
- * This class demonstrates the use of lambda expressions in Java for sorting and iterating over a list of movies.
+ * This class demonstrates the use of lambda expressions in Java for sorting and iterating
+ * over a list of movies.
  */
 public class MainLambda {
   /**
    * The main method that serves as the entry point of the application.
-   * It creates a list of movies, sorts them by title using a lambda expression, and prints the sorted list.
+   * It creates a list of movies, sorts them by title using a lambda expression,
+   * and prints the sorted list.
    *
    * @param args command-line arguments (not used)
    */
