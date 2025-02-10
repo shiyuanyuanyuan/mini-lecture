@@ -3,12 +3,14 @@ import java.util.List;
 import movie.Movie;
 
 /**
- * This class demonstrates the use of the reduce() method in Java Streams to sum the release years of movies.
+ * This class demonstrates the use of the reduce() method in Java Streams to sum
+ * the release years of movies.
  */
 public class MainReduce {
   /**
    * The main method that serves as the entry point of the application.
-   * It creates a list of movies, uses the reduce() method to sum their release years, and prints the total.
+   * It creates a list of movies, uses the reduce() method to sum their release years,
+   * and prints the total.
    *
    * @param args command-line arguments (not used)
    */
