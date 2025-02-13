@@ -56,18 +56,15 @@ It helps process collections (e.g., List, Set) in a functional and lazy manner.
 
 
 ### Code Examples
-- MainStreams.java
+- MainNoStreams.java (student code)
+- MainStreams.java (finished code)
 
 
 ## Alternative: Using Method References Instead of Lambdas
 
 ### Code Examples
-- MainReduce.java
-int totalYears = movieList.stream()
-    .map(Movie::year)
-    .reduce(0, Integer::sum);
-- MainLambda.java
-movieList.sort(Comparator.comparing(Movie::title).reversed());
+- MainNoMethodReference.java (student code)
+- MainReduce.java (finished code)
 
 
 
