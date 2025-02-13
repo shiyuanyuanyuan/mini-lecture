@@ -6,7 +6,7 @@ import movie.Movie;
  * This class demonstrates the use of the reduce() method in Java Streams to sum
  * the release years of movies.
  */
-public class MainReduce {
+public class MainNoMethodReference {
   /**
    * The main method that serves as the entry point of the application.
    * It creates a list of movies, uses the reduce() method to sum their release years,
@@ -20,13 +20,20 @@ public class MainReduce {
     movieList.add(new Movie("The Matrix", 1999));
     movieList.add(new Movie("Inception", 2010));
     movieList.add(new Movie("Interstellar", 2014));
-    
-    // Use the reduce() method to sum the release years of the movies
-    int totalYears = movieList.stream()
-        .map(Movie::year)
-        .reduce(0, Integer::sum);
 
+    // use for loop to sum the release years of the movies
+    int totalYears = 0;
+    for (Movie movie : movieList) {
+      totalYears += movie.year();
+    }
     // Print the total of the release years
     System.out.println("Total Years: " + totalYears);
+
+    // TODO: Use the reduce() method in Stream API and lambda expression to sum the release years of the movies
+
+
+    //TODO: Use the reduce() method and method reference to sum the release years of the movies
+
+
   }
 }

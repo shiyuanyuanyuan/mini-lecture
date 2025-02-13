@@ -10,8 +10,8 @@
 - Simplifies code by removing boilerplate
 
 ### Code Examples
- - MainNoLambda.java
- - MainLambda.java
+ - MainNoLambda.java (student code)
+ - MainLambda.java (finished code)
 
 
 ## Functional Interfaces
@@ -22,10 +22,13 @@ Unlike JavaScript, where arrow functions (=>) are standalone, Java requires a sp
 - Java doesn't have function types (like JavaScript) – Instead, it relies on functional interfaces.
 
 ### Code Examples
-- MainLambda.java
-- Comparator<T> Comparator<T> is part of java.util, and it is used to define custom sorting logic.
-- MainPredicate.java
-- Predicate<T>
+#### MainLambda.java 
+- .sort() uses Comparator<T> is part of java.util, and it is used to define custom sorting logic.
+- .forEach is a Method from Iterable, which is a superclass of List. Iterable<T>  <--  Collection<T>  <--  List<T>, and Iterable<T> is NOT a Functional Interface
+However, inside the Iterable interface, there is a default method: default void forEach(Consumer<? super T> action) Consumer<T> is a functional interface in Java that represents an operation that takes one input and returns nothing (void).
+
+#### MainPredicate.java 
+- (Predicate<T> is part of java.util.function, and it is used to define a boolean-valued function of one argument.)
 
 
 ## Stream API
@@ -42,14 +45,14 @@ It helps process collections (e.g., List, Set) in a functional and lazy manner.
 ### Stream Operations:
 
 #### Intermediate Operations (Modify the Stream)
-.map(Function<T, R>) → Transform elements
-.filter(Predicate<T>) → Remove elements
-.sorted() → Sort elements
+- .map(Function<T, R>) → Transform elements
+- .filter(Predicate<T>) → Remove elements
+- .sorted() → Sort elements
 
 #### Terminal Operations (End the Stream)
-.reduce() → Aggregate to a single result
-.collect() → Convert to List, Set, etc.
-.forEach() → Iterate over elements
+- .reduce() → Aggregate to a single result
+- .collect() → Convert to List, Set, etc.
+- .forEach() → Iterate over elements
 
 
 ### Code Examples

@@ -20,17 +20,28 @@ public class MainNoLambda {
     movieList.add(new Movie("Inception", 2010));
     movieList.add(new Movie("Interstellar", 2014));
 
-    // Sort the list of movies by title using an anonymous class
-    movieList.sort(new Comparator<Movie>() {
+    // Traditional named class
+    class MovieComparator implements Comparator<Movie> {
       @Override
       public int compare(Movie m1, Movie m2) {
         return m1.title().compareTo(m2.title());
       }
-    });
+    }
+    movieList.sort(new MovieComparator());
 
     // Iterate over the sorted list and print the title of each movie
     for (Movie movie : movieList) {
       System.out.println(movie.title());
     }
+
+    //TODO: Sort the list of movies by title using an anonymous class
+
+
+    //TODO: Sort the list of movies by year using lambda expression
+
+
+    // TODO:Iterate over the sorted list and print the year of each movie with a lambda expression using .forEach()
+
+
   }
 }
